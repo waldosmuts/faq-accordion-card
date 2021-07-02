@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 28em;
+  margin-bottom: -5em;
+  font-size: 12px;
+  box-shadow: 1px 74px 135px -50px rgba(0, 0, 0, 0.75);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:first-child {
+  overflow: visible;
+}
+
+.illustration {
+  position: relative;
+  top: -225px;
+  left: -1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.illustration-box {
+  display: none;
+  z-index: 3;
+}
+
+.illustration-top {
+  position: relative;
+  bottom: -125px;
+  left: 40px;
+  width: 250px;
+  content: url(images/illustration-woman-online-mobile.svg);
+  z-index: 2;
+}
+
+.illustration-bottom {
+  position: relative;
+  left: 67px;
+  bottom: -40px;
+  width: 220px;
+  z-index: 1;
+}
+
+h1 {
+  color: hsl(238, 29%, 16%);
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: -5.5em;
+}
+
+.dropdown-box {
+  width: 26em;
+  margin: 0.8em 0;
+}
+
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: hsl(238, 29%, 16%);
+}
+
+.dropdown-title img {
+  width: 10px;
+  height: 7px;
+}
+
+.dropdown-content {
+  margin: 0 3em 0.5em 1em;
+  max-width: 300px;
+  color: hsl(240, 6%, 50%);
+}
+
+.dropdown-box .dropdown-content {
+  display: none;
+}
+
+.dropdown-box:hover {
+  cursor: pointer;
+}
+
+.dropdown-box:hover .dropdown-title h2 {
+  color: hsl(14, 88%, 65%);
+}
+
+.selected .dropdown-title h2 {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+
+.selected .dropdown-content {
+  display: block;
+}
+
+.divider {
+  background-color: hsl(240, 5%, 91%);
+  height: 1px;
+  width: 100%;
+  /* margin-top: 1em; */
+}
+
+.attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  margin: 2em 0;
+  color: hsl(238, 29%, 16%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 60em;
+    height: 35em;
+    justify-content: space-between;
+    padding: 0 4em;
+    margin: 0;
+  }
+
+  .card-content {
+    height: 100%;
+    justify-content: flex-start;
+    align-items: start;
+    margin-top: 18em;
+    margin-left: -5em;
+  }
+
+  .card-content h1 {
+    margin-left: 0.4em;
+  }
+
+  .illustration-box {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    bottom: -520px;
+    left: -150px;
+  }
+
+  .illustration-top {
+    bottom: -190px;
+    left: -100px;
+    width: 450px;
+    content: url(images/illustration-woman-online-desktop.svg);
+  }
+
+  .illustration-bottom {
+    bottom: -60px;
+    left: -100px;
+    width: 450px;
+  }
+
+  .card:first-child {
+    overflow: hidden;
+  }
+}
